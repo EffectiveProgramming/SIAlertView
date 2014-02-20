@@ -291,6 +291,8 @@ static SIAlertView *__si_alert_current_view;
 
 - (void)dismissAnimated:(BOOL)animated
 {
+	[[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationFade];
+
     [self dismissAnimated:animated cleanup:YES];
 }
 
